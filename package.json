@@ -1,0 +1,36 @@
+{
+  "name": "tree-sitter-alt-ergo",
+  "version": "1.0.0",
+  "description": "Tree-sitter grammar for the legacy input language of Alt-Ergo",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "smt",
+    "alt-ergo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Halbaroth/tree-sitter-alt-ergo"
+  },
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "author": "Pierre Villemot <pierre.villemot@ocamlpro.com> (https://github.com/Halbaroth)",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.7"
+  },
+  "tree-sitter": [
+    {
+      "file-types": [
+        "ae"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
+}
