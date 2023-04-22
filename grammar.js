@@ -35,7 +35,7 @@ module.exports = grammar({
       $._decl
     )),
 
-    string: $ => /[\w ]*/,
+    string: $ => /[a-zA-Z0-9_]*/,
 
     integer: $ => /[0-9]+/,
 
@@ -64,22 +64,20 @@ module.exports = grammar({
 
     multi_logic_binder: $ => seq(sep1(',', $.named_ident), ':', $.primitive_type),
 
-    type_variable: $ => /'[a-zA-Z_][a-zA-Z0-9_?\\]+/,
+    label_expr: $ => seq($.ident, '=', $._expr),
 
-    label_expr: $ => seq($.ident, '=', $.expr),
-
-    _array_assignment: $ => seq($.expr, '<-', $.expr),
+    _array_assignment: $ => seq($._expr, '<-', $._expr),
 
     function_call: $ => seq(
       field('name', $.ident),
       '(',
-      field('args', sep(',', $.expr)),
+      field('args', sep(',', $._expr)),
       ')'
     ),
 
     _simple_expr: $ => choice(
       $.ident,
-      seq('(', $.expr, ')'),
+      seq('(', $._expr, ')'),
       $.integer,
       $.decimal,
       $.hexadecimal,
@@ -90,8 +88,8 @@ module.exports = grammar({
       seq('{', $._simple_expr, token('with'),  sep1(';', $.label_expr),'}'),
       seq($._simple_expr, '.', $.ident),
       $.function_call,
-      seq($._simple_expr, '[', $.expr, ']'),
-      //seq($.simple_expr, '[', sep1(',', $._array_assignment, ']')),
+      seq($._simple_expr, '[', $._expr, ']'),
+      seq($._simple_expr, '[', sep1(',', $._array_assignment), ']'),
       seq($._simple_expr, ':', $.primitive_type),
       seq($._simple_expr, '?', $.ident),
       seq($._simple_expr, '#', $.ident)
@@ -105,10 +103,10 @@ module.exports = grammar({
     let_binder: $ => seq(
       field('var', $.ident),
       '=',
-      field('expr', $.expr)
+      field('expr', $._expr)
     ),
 
-    match_case: $ => seq($.simple_pattern, '->', $.expr),
+    match_case: $ => seq($.simple_pattern, '->', $._expr),
 
     match_cases: $ => seq(
       optional('|'),
@@ -116,44 +114,44 @@ module.exports = grammar({
     ),
 
     expr_or_dom: $ => choice(
-      $.expr,
-      seq($.expr, 'in', /[\[\]]/, $.bound, ',', $.bound, /[\[\]]/),
-      seq($.ident, '|->', $.expr)
+      $._expr,
+      seq($._expr, 'in', /[\[\]]/, $.bound, ',', $.bound, /[\[\]]/),
+      seq($.ident, '|->', $._expr)
     ),
 
     trigger: $ => sep1(',', $.expr_or_dom),
 
     triggers: $ => seq('[', sep1('|', $.trigger), ']'),
 
-    filters: $ => seq('{', sep1(',', $.expr), '}'),
+    filters: $ => seq('{', sep1(',', $._expr), '}'),
 
-    _pow_operator: $ => choice('**', '**.', '@'),
+    pow_operator: $ => choice('**', '**.', '@'),
 
-    _mult_operator: $ => choice('*', '%', '/'),
+    mult_operator: $ => choice('*', '%', '/'),
 
-    _add_operator: $ => choice('+', '-'),
+    add_operator: $ => choice('+', '-'),
 
-    _rel_operator: $ => choice('<', '>', '<=', '>=', '=', '<>'),
+    rel_operator: $ => choice('<', '>', '<=', '>=', '=', '<>'),
 
-    _logic_operator: $ => choice('or', 'and', 'xor', '<->', '->'),
+    logic_operator: $ => choice('or', 'and', 'xor', '<->', '->'),
 
     ite_expr: $ => prec(PREC.ite, seq(
       token('if'),
-      field('if', $.expr),
+      field('if', $._expr),
       token('then'),
-      field('then', $.expr),
+      field('then', $._expr),
       token('else'),
-      field('else', $.expr)
+      field('else', $._expr)
     )),
 
     let_expr: $ => prec(PREC.let, seq(
       token('let'),
       field('binder', $.let_binder),
       token('in'),
-      field('expr', $.expr)
+      field('expr', $._expr)
     )),
 
-    match_expr: $ => seq('match', $.expr, 'with', $.match_cases, 'end'),
+    match_expr: $ => seq('match', $._expr, 'with', $.match_cases, 'end'),
 
     forall_expr: $ => prec(PREC.forall, seq(
       token('forall'),
@@ -161,7 +159,7 @@ module.exports = grammar({
       field('triggers', optional($.triggers)),
       field('filters', optional($.filters)),
       '.',
-      field('body', $.expr)
+      field('body', $._expr)
     )),
 
     exists_expr: $ => prec(PREC.exists, seq(
@@ -170,41 +168,41 @@ module.exports = grammar({
       field('triggers', optional($.triggers)),
       field('filters', optional($.filters)),
       '.',
-      field('body', $.expr)
+      field('body', $._expr)
     )),
 
-    infix_operator: $ => choice(
-      $._pow_operator,
-      $._mult_operator,
-      $._add_operator,
-      $._rel_operator,
-      $._logic_operator,
+    _infix_operator: $ => choice(
+      $.pow_operator,
+      $.mult_operator,
+      $.add_operator,
+      $.rel_operator,
+      $.logic_operator,
     ),
 
-    infix_expr: $ => {
+    _infix_expr: $ => {
       const table = [
         {
-          operator: $._pow_operator,
+          operator: $.pow_operator,
           precedence: PREC.pow,
           associativity: 'right'
         },
         {
-          operator: $._mult_operator,
+          operator: $.mult_operator,
           precedence: PREC.mult,
           associativity: 'left'
         },
         {
-          operator: $._add_operator,
+          operator: $.add_operator,
           precedence: PREC.add,
           associativity: 'left'
         },
         {
-          operator: $._rel_operator,
+          operator: $.rel_operator,
           precedence: PREC.rel,
           associativity: 'left'
         },
         {
-          operator: $._logic_operator,
+          operator: $.logic_operator,
           precedence: PREC.logic,
           associativity: 'right'
         },
@@ -213,21 +211,21 @@ module.exports = grammar({
       return choice(...table.map(
         ({operator, precedence, associativity}) =>
           prec[associativity](precedence, seq(
-            field('left', $.expr),
-            $.infix_operator,
-            field('right', $.expr)
+            field('left', $._expr),
+            field('op', $._infix_operator),
+            field('right', $._expr)
           ))
       ))
     },
 
-    expr: $ => choice(
+    _expr: $ => choice(
       $._simple_expr,
-      prec(PREC.not, seq('not', $.expr)),
-      prec(PREC.uminus, seq('-', $.expr)),
+      prec(PREC.not, seq('not', $._expr)),
+      prec(PREC.uminus, seq('-', $._expr)),
       seq('[|', $.integer, '|]'),
-      seq($.expr, '^{', $.integer, ',', $.integer ,'}'),
-      seq('distinct', '(', sep2(',', $.expr), ')'),
-      $.infix_expr,
+      seq($._expr, '^{', $.integer, ',', $.integer ,'}'),
+      seq('distinct', '(', sep2(',', $._expr), ')'),
+      $._infix_expr,
       $.ite_expr,
       $.let_expr,
       $.match_expr,
@@ -325,14 +323,14 @@ module.exports = grammar({
     // Top level declarations
 
     theory_elt: $ => choice(
-      seq(token('axiom'), $.ident, ':', $.expr),
-      seq(token('casesplit'), $.ident, ':', $.expr)
+      seq(token('axiom'), $.ident, ':', $._expr),
+      seq(token('casesplit'), $.ident, ':', $._expr)
     ),
 
     rewriting_list: $ => choice(
-      $.expr,
-      seq($.expr, ';'),
-      seq($.expr, ';', $.rewriting_list)
+      $._expr,
+      seq($._expr, ';'),
+      seq($._expr, ';', $.rewriting_list)
     ),
 
     theory_decl: $ => seq(
@@ -364,7 +362,7 @@ module.exports = grammar({
       token('axiom'),
       field('name', $.ident),
       ':',
-      $.expr
+      $._expr
     ),
 
     rewriting_decl: $ => seq(
@@ -378,7 +376,7 @@ module.exports = grammar({
       token('goal'),
       field('name', $.ident),
       ':',
-      $.expr
+      $._expr
     ),
 
     function_def: $ => seq(
@@ -390,7 +388,7 @@ module.exports = grammar({
       ':',
       field('ret_ty', $.primitive_type),
       '=',
-      field('body', $.expr)
+      field('body', $._expr)
     ),
 
     predicate_def: $ => seq(
@@ -402,7 +400,7 @@ module.exports = grammar({
         ')'
       )),
       '=',
-      field('body', $.expr)
+      field('body', $._expr)
     ),
 
     _function_or_predicate_def: $ => choice(
