@@ -1221,6 +1221,46 @@
         ]
       }
     },
+    "check_expr": {
+      "type": "PREC",
+      "value": 13,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "TOKEN",
+            "content": {
+              "type": "STRING",
+              "value": "check"
+            }
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expr"
+          }
+        ]
+      }
+    },
+    "cut_expr": {
+      "type": "PREC",
+      "value": 13,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "TOKEN",
+            "content": {
+              "type": "STRING",
+              "value": "cut"
+            }
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_expr"
+          }
+        ]
+      }
+    },
     "_infix_operator": {
       "type": "CHOICE",
       "members": [
@@ -2462,6 +2502,62 @@
         }
       ]
     },
+    "check_valid_decl": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "check_valid"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expr"
+        }
+      ]
+    },
+    "check_sat_decl": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "check_sat"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expr"
+        }
+      ]
+    },
     "goal_decl": {
       "type": "SEQ",
       "members": [
@@ -2736,6 +2832,14 @@
         {
           "type": "SYMBOL",
           "name": "rewriting_decl"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "check_valid_decl"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "check_sat_decl"
         },
         {
           "type": "SYMBOL",

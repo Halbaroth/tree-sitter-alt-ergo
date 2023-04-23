@@ -171,6 +171,14 @@ module.exports = grammar({
       field('body', $._expr)
     )),
 
+    check_expr: $ => prec(PREC.check, seq(
+      token('check'), $._expr
+    )),
+
+    cut_expr: $ => prec(PREC.cut, seq(
+      token('cut'), $._expr
+    )),
+
     _infix_operator: $ => choice(
       $.pow_operator,
       $.mult_operator,
@@ -372,6 +380,20 @@ module.exports = grammar({
       $.rewriting_list
     ),
 
+    check_valid_decl: $ => seq(
+      token('check_valid'),
+      field('name', $.ident),
+      ':',
+      $._expr
+    ),
+
+    check_sat_decl: $ => seq(
+      token('check_sat'),
+      field('name', $.ident),
+      ':',
+      $._expr
+    ),
+
     goal_decl: $ => seq(
       token('goal'),
       field('name', $.ident),
@@ -415,6 +437,8 @@ module.exports = grammar({
       sep1(token(prec(PREC.fun_and, 'and')), $._function_or_predicate_def),
       $.axiom_decl,
       $.rewriting_decl,
+      $.check_valid_decl,
+      $.check_sat_decl,
       $.goal_decl,
     ),
   }
