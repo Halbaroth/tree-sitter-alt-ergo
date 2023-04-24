@@ -1601,6 +1601,10 @@
       "type": "CHOICE",
       "members": [
         {
+          "type": "STRING",
+          "value": "?"
+        },
+        {
           "type": "SEQ",
           "members": [
             {
@@ -2254,7 +2258,7 @@
               "type": "TOKEN",
               "content": {
                 "type": "STRING",
-                "value": "casesplit"
+                "value": "case_split"
               }
             },
             {

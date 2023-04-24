@@ -247,6 +247,7 @@ module.exports = grammar({
     ),
 
     bound: $ => choice(
+      '?',
       seq(optional('?'), $.ident),
       seq(optional('-'), $.integer),
       seq(optional('-'), $.decimal),
@@ -337,7 +338,7 @@ module.exports = grammar({
 
     theory_elt: $ => choice(
       seq(token('axiom'), $.ident, ':', $._expr),
-      seq(token('casesplit'), $.ident, ':', $._expr)
+      seq(token('case_split'), $.ident, ':', $._expr)
     ),
 
     rewriting_list: $ => choice(

@@ -46,6 +46,7 @@
   "forall"
   "exists"
   "axiom"
+  "case_split"
   "check"
   "cut"
   "logic"

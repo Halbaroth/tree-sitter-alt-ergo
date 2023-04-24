@@ -576,7 +576,7 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "decimal",
@@ -9710,7 +9710,7 @@
     "named": false
   },
   {
-    "type": "casesplit",
+    "type": "case_split",
     "named": false
   },
   {
