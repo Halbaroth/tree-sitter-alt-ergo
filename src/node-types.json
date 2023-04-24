@@ -10177,6 +10177,10 @@
     "named": false
   },
   {
+    "type": "comment",
+    "named": true
+  },
+  {
     "type": "cut",
     "named": false
   },
