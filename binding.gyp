@@ -1,15 +1,15 @@
 {
   "targets": [
     {
-      "target_name": "tree_sitter_smtlib2_binding",
+      "target_name": "tree_sitter_alt_ergo_binding",
       "include_dirs": [
         "<!(node -e \"require('nan')\")",
         "src"
       ],
       "sources": [
-        "bindings/node/binding.cc",
         "src/parser.c",
-        "src/scanner.cc"
+        "src/scanner.cc",
+        "bindings/node/binding.cc"
       ],
       "cflags_c": [
         "-std=c99",

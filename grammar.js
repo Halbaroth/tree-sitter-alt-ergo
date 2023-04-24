@@ -30,6 +30,16 @@ const PREC = {
 
 module.exports = grammar({
   name: 'alt_ergo',
+
+  extras: $ => [
+    /\s/,
+    $.comment
+  ],
+
+  externals: $ => [
+    $.comment
+  ],
+
   rules : {
     source_file: $ => repeat(choice(
       $._decl

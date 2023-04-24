@@ -7,6 +7,8 @@
 
 (string) @string
 
+(comment) @comment
+
 [ "true" "false" ] @boolean
 
 [ "," ";" "|" ] @punctuation.delimiter
@@ -32,7 +34,6 @@
   "<->"
   "|->"
 ] @operator
-
 
 [
   "type"
