@@ -1,5 +1,6 @@
 #include <tree_sitter/parser.h>
 #include <string>
+#include <iostream>
 
 enum {
   COMMENT

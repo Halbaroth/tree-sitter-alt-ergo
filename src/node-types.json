@@ -4321,7 +4321,7 @@
         "required": true,
         "types": [
           {
-            "type": "named_ident",
+            "type": "ident",
             "named": true
           }
         ]
@@ -7373,11 +7373,11 @@
       "required": true,
       "types": [
         {
-          "type": "logic_type",
+          "type": "ident",
           "named": true
         },
         {
-          "type": "named_ident",
+          "type": "logic_type",
           "named": true
         }
       ]
@@ -8276,30 +8276,11 @@
       "required": true,
       "types": [
         {
-          "type": "named_ident",
-          "named": true
-        },
-        {
-          "type": "primitive_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "named_ident",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
           "type": "ident",
           "named": true
         },
         {
-          "type": "string",
+          "type": "primitive_type",
           "named": true
         }
       ]
@@ -8665,7 +8646,7 @@
         "required": true,
         "types": [
           {
-            "type": "named_ident",
+            "type": "ident",
             "named": true
           }
         ]
@@ -10279,10 +10260,6 @@
   {
     "type": "rewriting",
     "named": false
-  },
-  {
-    "type": "string",
-    "named": true
   },
   {
     "type": "then",

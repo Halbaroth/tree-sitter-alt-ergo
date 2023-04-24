@@ -59,28 +59,6 @@
       "type": "PATTERN",
       "value": "[a-zA-Z_][a-zA-Z0-9_?'\\\\]*"
     },
-    "named_ident": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "ident"
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "ident"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "string"
-            }
-          ]
-        }
-      ]
-    },
     "logic_binder": {
       "type": "SEQ",
       "members": [
@@ -114,7 +92,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "named_ident"
+              "name": "ident"
             },
             {
               "type": "REPEAT",
@@ -127,7 +105,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "named_ident"
+                    "name": "ident"
                   }
                 ]
               }
@@ -2416,7 +2394,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "named_ident"
+              "name": "ident"
             },
             {
               "type": "REPEAT",
@@ -2429,7 +2407,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "named_ident"
+                    "name": "ident"
                   }
                 ]
               }
@@ -2601,7 +2579,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "named_ident"
+            "name": "ident"
           }
         },
         {
@@ -2690,7 +2668,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "named_ident"
+            "name": "ident"
           }
         },
         {

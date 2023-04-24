@@ -59,11 +59,6 @@ module.exports = grammar({
 
     ident: $ => /[a-zA-Z_][a-zA-Z0-9_?'\\]*/,
 
-    named_ident: $ => choice(
-      $.ident,
-      seq($.ident, $.string)
-    ),
-
     // Binders
 
     logic_binder: $ => seq(
@@ -72,7 +67,7 @@ module.exports = grammar({
       field('type', $.primitive_type)
     ),
 
-    multi_logic_binder: $ => seq(sep1(',', $.named_ident), ':', $.primitive_type),
+    multi_logic_binder: $ => seq(sep1(',', $.ident), ':', $.primitive_type),
 
     label_expr: $ => seq($.ident, '=', $._expr),
 
@@ -371,7 +366,7 @@ module.exports = grammar({
     logic_decl: $ => seq(
       token('logic'),
       optional('ac'),
-      sep1(',', $.named_ident),
+      sep1(',', $.ident),
       ':',
       $.logic_type
     ),
@@ -413,7 +408,7 @@ module.exports = grammar({
 
     function_def: $ => seq(
       token('function'),
-      field('name', $.named_ident),
+      field('name', $.ident),
       '(',
       field('args', sep(',', $.logic_binder)),
       ')',
@@ -425,7 +420,7 @@ module.exports = grammar({
 
     predicate_def: $ => seq(
       token('predicate'),
-      field('name', $.named_ident),
+      field('name', $.ident),
       optional(seq(
         '(',
         field('args', sep(',', $.logic_binder)),
