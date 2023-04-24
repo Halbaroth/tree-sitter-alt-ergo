@@ -5,7 +5,7 @@
   (hexadecimal)
 ] @float
 
-(string) @string
+; (string) @string
 
 (comment) @comment
 
@@ -50,7 +50,6 @@
   "cut"
   "logic"
   "theory"
-  "check_valid"
   "check_sat"
   "goal"
   "rewriting"
@@ -110,13 +109,13 @@
   args: (_))
 
 (function_def
-  name: (named_ident) @function
+  name: (ident) @function
   args: (_)
   ret_ty: (_)
   body: (_))
 
 (predicate_def
-  name: (named_ident) @function
+  name: (ident) @function
   args: (_)
   body: (_))
 

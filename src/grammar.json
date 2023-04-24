@@ -1601,8 +1601,25 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "ident"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "?"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "SYMBOL",
+              "name": "ident"
+            }
+          ]
         },
         {
           "type": "SEQ",
@@ -2480,34 +2497,6 @@
         }
       ]
     },
-    "check_valid_decl": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "check_valid"
-          }
-        },
-        {
-          "type": "FIELD",
-          "name": "name",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ident"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ":"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_expr"
-        }
-      ]
-    },
     "check_sat_decl": {
       "type": "SEQ",
       "members": [
@@ -2810,10 +2799,6 @@
         {
           "type": "SYMBOL",
           "name": "rewriting_decl"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "check_valid_decl"
         },
         {
           "type": "SYMBOL",

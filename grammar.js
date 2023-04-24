@@ -247,7 +247,7 @@ module.exports = grammar({
     ),
 
     bound: $ => choice(
-      $.ident,
+      seq(optional('?'), $.ident),
       seq(optional('-'), $.integer),
       seq(optional('-'), $.decimal),
       seq(optional('-'), $.hexadecimal),
@@ -385,13 +385,6 @@ module.exports = grammar({
       $.rewriting_list
     ),
 
-    check_valid_decl: $ => seq(
-      token('check_valid'),
-      field('name', $.ident),
-      ':',
-      $._expr
-    ),
-
     check_sat_decl: $ => seq(
       token('check_sat'),
       field('name', $.ident),
@@ -442,7 +435,6 @@ module.exports = grammar({
       sep1(token(prec(PREC.fun_and, 'and')), $._function_or_predicate_def),
       $.axiom_decl,
       $.rewriting_decl,
-      $.check_valid_decl,
       $.check_sat_decl,
       $.goal_decl,
     ),
