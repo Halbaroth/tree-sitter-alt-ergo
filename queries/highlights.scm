@@ -122,7 +122,7 @@
 
 (logic_binder
   arg: (ident) @parameter
-  type: (_))
+  ty: (_))
 
 (let_binder
   var: (ident) @variable
