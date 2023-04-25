@@ -20,9 +20,9 @@ const PREC = {
   pow: 9,
   mult: 8,
   add: 7,
-  rel: 5,
-  logic: 6,
-  ite: 4,
+  rel: 6,
+  ite: 5,
+  logic: 4,
   exists: 2,
   forall: 2,
   let: 1
@@ -64,7 +64,7 @@ module.exports = grammar({
     logic_binder: $ => seq(
       field('arg', $.ident),
       ':',
-      field('type', $.primitive_type)
+      field('ty', $.primitive_type)
     ),
 
     multi_logic_binder: $ => seq(sep1(',', $.ident), ':', $.primitive_type),
@@ -161,8 +161,8 @@ module.exports = grammar({
     forall_expr: $ => prec(PREC.forall, seq(
       token('forall'),
       field('logic_binder', sep1(',', $.multi_logic_binder)),
-      field('triggers', optional($.triggers)),
-      field('filters', optional($.filters)),
+      optional(field('triggers', $.triggers)),
+      optional(field('filters', $.filters)),
       '.',
       field('body', $._expr)
     )),
@@ -192,7 +192,7 @@ module.exports = grammar({
       $.logic_operator,
     ),
 
-    _infix_expr: $ => {
+    infix_expr: $ => {
       const table = [
         {
           operator: $.pow_operator,
@@ -225,7 +225,7 @@ module.exports = grammar({
         ({operator, precedence, associativity}) =>
           prec[associativity](precedence, seq(
             field('left', $._expr),
-            field('op', $._infix_operator),
+            field('op', operator),
             field('right', $._expr)
           ))
       ))
@@ -238,7 +238,7 @@ module.exports = grammar({
       seq('[|', $.integer, '|]'),
       seq($._expr, '^{', $.integer, ',', $.integer ,'}'),
       seq('distinct', '(', sep2(',', $._expr), ')'),
-      $._infix_expr,
+      $.infix_expr,
       $.ite_expr,
       $.let_expr,
       $.match_expr,
@@ -249,9 +249,7 @@ module.exports = grammar({
     bound: $ => choice(
       '?',
       seq(optional('?'), $.ident),
-      seq(optional('-'), $.integer),
-      seq(optional('-'), $.decimal),
-      seq(optional('-'), $.hexadecimal),
+      seq(optional('-'), choice($.integer, $.decimal, $.hexadecimal)),
     ),
 
     // Type variables
@@ -273,7 +271,7 @@ module.exports = grammar({
       seq(token('bitv'), '[', /[0-9]+/, ']'),
       $.ident,
       $.type_var,
-      seq($.primitive_type, $.ident),
+      seq($.primitive_type, field('cstr', $.ident)),
       seq('(', sep1(',', $.primitive_type), ')', $.ident)
     ),
 
@@ -282,7 +280,7 @@ module.exports = grammar({
       token('prop')
     ),
 
-    logic_type: $ => choice(
+    _logic_type: $ => choice(
       $._primitive_type_or_prop,
       seq(sep(',', $.primitive_type), '->', $._primitive_type_or_prop)
     ),
@@ -290,7 +288,7 @@ module.exports = grammar({
     record_label_with_type: $ => seq(
       field('lbl', $.ident),
       ':',
-      field('type', $.primitive_type)
+      field('ty', $.primitive_type)
     ),
 
     record_type: $ => seq(
@@ -300,14 +298,14 @@ module.exports = grammar({
     algebraic_label_with_type: $ => seq(
       field('lbl', $.ident),
       ':',
-      field('type', $.primitive_type)
+      field('ty', $.primitive_type)
     ),
 
     algebraic_args: $ => seq(
       'of', '{', sep1(';', $.algebraic_label_with_type), '}'
     ),
 
-    algebraic_constructor: $ => seq(
+    algebraic_cstr: $ => seq(
       field('cstr', $.ident),
       field('args', optional($.algebraic_args))
     ),
@@ -321,7 +319,7 @@ module.exports = grammar({
       optional($.type_vars),
       field('name', $.ident),
       '=',
-      sep1('|', $.algebraic_constructor)
+      sep1('|', $.algebraic_cstr)
     ),
 
     algebraic_typedefs: $ =>
@@ -369,7 +367,7 @@ module.exports = grammar({
       optional('ac'),
       sep1(',', $.ident),
       ':',
-      $.logic_type
+      field('ty', $._logic_type)
     ),
 
     axiom_decl: $ => seq(

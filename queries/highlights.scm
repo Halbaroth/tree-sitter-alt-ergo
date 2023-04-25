@@ -89,17 +89,17 @@
 
 (type_var) @variable
 
-(algebraic_constructor
+(algebraic_cstr
   cstr: (ident) @constructor
   args: (_)*)
 
 (algebraic_label_with_type
   lbl: (ident) @field
-  type: (_))
+  ty: (_))
 
 (record_label_with_type
   lbl: (ident) @field
-  type: (_))
+  ty: (_))
 
 (simple_pattern
   pat: (ident) @constructor

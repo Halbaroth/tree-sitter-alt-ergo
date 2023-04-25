@@ -46,7 +46,7 @@
     }
   },
   {
-    "type": "algebraic_constructor",
+    "type": "algebraic_cstr",
     "named": true,
     "fields": {
       "args": {
@@ -85,7 +85,7 @@
           }
         ]
       },
-      "type": {
+      "ty": {
         "multiple": false,
         "required": true,
         "types": [
@@ -117,7 +117,7 @@
       "required": true,
       "types": [
         {
-          "type": "algebraic_constructor",
+          "type": "algebraic_cstr",
           "named": true
         },
         {
@@ -146,172 +146,6 @@
     "type": "axiom_decl",
     "named": true,
     "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
       "name": {
         "multiple": false,
         "required": true,
@@ -319,198 +153,6 @@
           {
             "type": "ident",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -541,6 +183,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -601,172 +247,6 @@
     "type": "check_sat_decl",
     "named": true,
     "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
       "name": {
         "multiple": false,
         "required": true,
@@ -774,198 +254,6 @@
           {
             "type": "ident",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -996,6 +284,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -1095,10 +387,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -1131,6 +419,10 @@
             "named": true
           },
           {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
             "type": "integer",
             "named": true
           },
@@ -1147,15 +439,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -1163,15 +447,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -1210,172 +486,6 @@
           }
         ]
       },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
       "logic_binder": {
         "multiple": true,
         "required": true,
@@ -1387,198 +497,6 @@
           {
             "type": "multi_logic_binder",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -1597,366 +515,7 @@
   {
     "type": "expr_or_dom",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
@@ -1990,6 +549,10 @@
           "named": true
         },
         {
+          "type": "infix_expr",
+          "named": true
+        },
+        {
           "type": "integer",
           "named": true
         },
@@ -2019,366 +582,7 @@
   {
     "type": "filters",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
@@ -2405,6 +609,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -2499,10 +707,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -2535,6 +739,10 @@
             "named": true
           },
           {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
             "type": "integer",
             "named": true
           },
@@ -2551,15 +759,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -2567,15 +767,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -2614,172 +806,6 @@
           }
         ]
       },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
       "logic_binder": {
         "multiple": true,
         "required": true,
@@ -2791,198 +817,6 @@
           {
             "type": "multi_logic_binder",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -3063,10 +897,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -3099,169 +929,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -3281,15 +949,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -3297,15 +957,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -3341,198 +993,6 @@
           {
             "type": "ident",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -3617,10 +1077,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -3653,169 +1109,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -3835,15 +1129,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -3851,15 +1137,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -3894,32 +1172,6 @@
         "types": [
           {
             "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           }
         ]
@@ -3933,172 +1185,6 @@
             "named": true
           }
         ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
       }
     }
   },
@@ -4106,172 +1192,6 @@
     "type": "goal_decl",
     "named": true,
     "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
       "name": {
         "multiple": false,
         "required": true,
@@ -4279,198 +1199,6 @@
           {
             "type": "ident",
             "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -4501,6 +1229,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -4543,6 +1275,338 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "infix_expr",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": ":",
+            "named": false
+          },
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "?",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "[|",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "^{",
+            "named": false
+          },
+          {
+            "type": "decimal",
+            "named": true
+          },
+          {
+            "type": "distinct",
+            "named": false
+          },
+          {
+            "type": "exists_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "forall_expr",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "hexadecimal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "ite_expr",
+            "named": true
+          },
+          {
+            "type": "label_expr",
+            "named": true
+          },
+          {
+            "type": "let_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "not",
+            "named": false
+          },
+          {
+            "type": "primitive_type",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "void",
+            "named": false
+          },
+          {
+            "type": "with",
+            "named": false
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "|]",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "add_operator",
+            "named": true
+          },
+          {
+            "type": "logic_operator",
+            "named": true
+          },
+          {
+            "type": "mult_operator",
+            "named": true
+          },
+          {
+            "type": "pow_operator",
+            "named": true
+          },
+          {
+            "type": "rel_operator",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": ":",
+            "named": false
+          },
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "?",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "[|",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "^{",
+            "named": false
+          },
+          {
+            "type": "decimal",
+            "named": true
+          },
+          {
+            "type": "distinct",
+            "named": false
+          },
+          {
+            "type": "exists_expr",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "forall_expr",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "hexadecimal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "ite_expr",
+            "named": true
+          },
+          {
+            "type": "label_expr",
+            "named": true
+          },
+          {
+            "type": "let_expr",
+            "named": true
+          },
+          {
+            "type": "match_expr",
+            "named": true
+          },
+          {
+            "type": "not",
+            "named": false
+          },
+          {
+            "type": "primitive_type",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
+          },
+          {
+            "type": "void",
+            "named": false
+          },
+          {
+            "type": "with",
+            "named": false
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "|]",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      }
     }
   },
   {
@@ -4615,10 +1679,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -4651,6 +1711,10 @@
             "named": true
           },
           {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
             "type": "integer",
             "named": true
           },
@@ -4667,15 +1731,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -4683,15 +1739,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -4781,10 +1829,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -4817,169 +1861,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -4999,15 +1881,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -5015,207 +1889,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -5305,10 +1979,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -5341,6 +2011,10 @@
             "named": true
           },
           {
+            "type": "infix_expr",
+            "named": true
+          },
+          {
             "type": "integer",
             "named": true
           },
@@ -5357,15 +2031,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -5373,15 +2039,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -5415,366 +2073,7 @@
   {
     "type": "label_expr",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -5801,6 +2100,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -5895,10 +2198,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -5931,169 +2230,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -6113,15 +2250,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -6129,207 +2258,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -6445,10 +2374,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -6481,169 +2406,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -6663,15 +2426,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -6679,207 +2434,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -6924,7 +2479,7 @@
           }
         ]
       },
-      "type": {
+      "ty": {
         "multiple": false,
         "required": true,
         "types": [
@@ -6939,17 +2494,36 @@
   {
     "type": "logic_decl",
     "named": true,
-    "fields": {},
+    "fields": {
+      "ty": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "primitive_type",
+            "named": true
+          },
+          {
+            "type": "prop",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
           "type": "ident",
-          "named": true
-        },
-        {
-          "type": "logic_type",
           "named": true
         }
       ]
@@ -6961,383 +2535,9 @@
     "fields": {}
   },
   {
-    "type": "logic_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "primitive_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "match_case",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -7364,6 +2564,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -7415,366 +2619,7 @@
   {
     "type": "match_expr",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -7801,6 +2646,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -7942,10 +2791,6 @@
             "named": false
           },
           {
-            "type": "add_operator",
-            "named": true
-          },
-          {
             "type": "decimal",
             "named": true
           },
@@ -7978,169 +2823,7 @@
             "named": true
           },
           {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
+            "type": "infix_expr",
             "named": true
           },
           {
@@ -8160,15 +2843,7 @@
             "named": true
           },
           {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
             "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
             "named": true
           },
           {
@@ -8176,15 +2851,7 @@
             "named": false
           },
           {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
             "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
             "named": true
           },
           {
@@ -8222,205 +2889,24 @@
             "named": true
           }
         ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
       }
     }
   },
   {
     "type": "primitive_type",
     "named": true,
-    "fields": {},
+    "fields": {
+      "cstr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
@@ -8454,7 +2940,7 @@
           }
         ]
       },
-      "type": {
+      "ty": {
         "multiple": false,
         "required": true,
         "types": [
@@ -8545,366 +3031,7 @@
   {
     "type": "rewriting_list",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
@@ -8931,6 +3058,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {
@@ -9090,366 +3221,7 @@
   {
     "type": "theory_elt",
     "named": true,
-    "fields": {
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      },
-      "op": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "#",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": ".",
-            "named": false
-          },
-          {
-            "type": ":",
-            "named": false
-          },
-          {
-            "type": ";",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[|",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "^{",
-            "named": false
-          },
-          {
-            "type": "add_operator",
-            "named": true
-          },
-          {
-            "type": "decimal",
-            "named": true
-          },
-          {
-            "type": "distinct",
-            "named": false
-          },
-          {
-            "type": "exists_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "forall_expr",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "hexadecimal",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "integer",
-            "named": true
-          },
-          {
-            "type": "ite_expr",
-            "named": true
-          },
-          {
-            "type": "label_expr",
-            "named": true
-          },
-          {
-            "type": "let_expr",
-            "named": true
-          },
-          {
-            "type": "logic_operator",
-            "named": true
-          },
-          {
-            "type": "match_expr",
-            "named": true
-          },
-          {
-            "type": "mult_operator",
-            "named": true
-          },
-          {
-            "type": "not",
-            "named": false
-          },
-          {
-            "type": "pow_operator",
-            "named": true
-          },
-          {
-            "type": "primitive_type",
-            "named": true
-          },
-          {
-            "type": "rel_operator",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          },
-          {
-            "type": "void",
-            "named": false
-          },
-          {
-            "type": "with",
-            "named": false
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "|]",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
@@ -9476,6 +3248,10 @@
         },
         {
           "type": "ident",
+          "named": true
+        },
+        {
+          "type": "infix_expr",
           "named": true
         },
         {

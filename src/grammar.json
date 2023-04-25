@@ -76,7 +76,7 @@
         },
         {
           "type": "FIELD",
-          "name": "type",
+          "name": "ty",
           "content": {
             "type": "SYMBOL",
             "name": "primitive_type"
@@ -905,7 +905,7 @@
     },
     "ite_expr": {
       "type": "PREC",
-      "value": 4,
+      "value": 5,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1064,36 +1064,36 @@
             }
           },
           {
-            "type": "FIELD",
-            "name": "triggers",
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "triggers",
+                "content": {
                   "type": "SYMBOL",
                   "name": "triggers"
-                },
-                {
-                  "type": "BLANK"
                 }
-              ]
-            }
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           },
           {
-            "type": "FIELD",
-            "name": "filters",
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "filters",
+                "content": {
                   "type": "SYMBOL",
                   "name": "filters"
-                },
-                {
-                  "type": "BLANK"
                 }
-              ]
-            }
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           },
           {
             "type": "STRING",
@@ -1264,7 +1264,7 @@
         }
       ]
     },
-    "_infix_expr": {
+    "infix_expr": {
       "type": "CHOICE",
       "members": [
         {
@@ -1286,7 +1286,7 @@
                 "name": "op",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix_operator"
+                  "name": "pow_operator"
                 }
               },
               {
@@ -1319,7 +1319,7 @@
                 "name": "op",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix_operator"
+                  "name": "mult_operator"
                 }
               },
               {
@@ -1352,7 +1352,7 @@
                 "name": "op",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix_operator"
+                  "name": "add_operator"
                 }
               },
               {
@@ -1368,39 +1368,6 @@
         },
         {
           "type": "PREC_LEFT",
-          "value": 5,
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "FIELD",
-                "name": "left",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
-                }
-              },
-              {
-                "type": "FIELD",
-                "name": "op",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_infix_operator"
-                }
-              },
-              {
-                "type": "FIELD",
-                "name": "right",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "PREC_RIGHT",
           "value": 6,
           "content": {
             "type": "SEQ",
@@ -1418,7 +1385,40 @@
                 "name": "op",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_infix_operator"
+                  "name": "rel_operator"
+                }
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_expr"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_RIGHT",
+          "value": 4,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_expr"
+                }
+              },
+              {
+                "type": "FIELD",
+                "name": "op",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "logic_operator"
                 }
               },
               {
@@ -1573,7 +1573,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_infix_expr"
+          "name": "infix_expr"
         },
         {
           "type": "SYMBOL",
@@ -1641,50 +1641,21 @@
               ]
             },
             {
-              "type": "SYMBOL",
-              "name": "integer"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
               "type": "CHOICE",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": "-"
+                  "type": "SYMBOL",
+                  "name": "integer"
                 },
                 {
-                  "type": "BLANK"
-                }
-              ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "decimal"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "-"
+                  "type": "SYMBOL",
+                  "name": "decimal"
                 },
                 {
-                  "type": "BLANK"
+                  "type": "SYMBOL",
+                  "name": "hexadecimal"
                 }
               ]
-            },
-            {
-              "type": "SYMBOL",
-              "name": "hexadecimal"
             }
           ]
         }
@@ -1821,8 +1792,12 @@
               "name": "primitive_type"
             },
             {
-              "type": "SYMBOL",
-              "name": "ident"
+              "type": "FIELD",
+              "name": "cstr",
+              "content": {
+                "type": "SYMBOL",
+                "name": "ident"
+              }
             }
           ]
         },
@@ -1886,7 +1861,7 @@
         }
       ]
     },
-    "logic_type": {
+    "_logic_type": {
       "type": "CHOICE",
       "members": [
         {
@@ -1958,7 +1933,7 @@
         },
         {
           "type": "FIELD",
-          "name": "type",
+          "name": "ty",
           "content": {
             "type": "SYMBOL",
             "name": "primitive_type"
@@ -2021,7 +1996,7 @@
         },
         {
           "type": "FIELD",
-          "name": "type",
+          "name": "ty",
           "content": {
             "type": "SYMBOL",
             "name": "primitive_type"
@@ -2071,7 +2046,7 @@
         }
       ]
     },
-    "algebraic_constructor": {
+    "algebraic_cstr": {
       "type": "SEQ",
       "members": [
         {
@@ -2149,7 +2124,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "algebraic_constructor"
+              "name": "algebraic_cstr"
             },
             {
               "type": "REPEAT",
@@ -2162,7 +2137,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "algebraic_constructor"
+                    "name": "algebraic_cstr"
                   }
                 ]
               }
@@ -2440,8 +2415,12 @@
           "value": ":"
         },
         {
-          "type": "SYMBOL",
-          "name": "logic_type"
+          "type": "FIELD",
+          "name": "ty",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_logic_type"
+          }
         }
       ]
     },
