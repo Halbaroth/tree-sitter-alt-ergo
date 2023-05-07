@@ -86,11 +86,11 @@ module.exports = grammar({
       $.integer,
       $.decimal,
       $.hexadecimal,
-      token('true'),
-      token('false'),
-      token('void'),
+      'true',
+      'false',
+      'void',
       seq('{', sep1(';', $.label_expr), '}'),
-      seq('{', $._simple_expr, token('with'),  sep1(';', $.label_expr),'}'),
+      seq('{', $._simple_expr, 'with',  sep1(';', $.label_expr),'}'),
       seq($._simple_expr, '.', $.ident),
       $.function_call,
       seq($._simple_expr, '[', $._expr, ']'),
@@ -141,25 +141,25 @@ module.exports = grammar({
     logic_operator: $ => choice('or', 'and', 'xor', '<->', '->'),
 
     ite_expr: $ => prec(PREC.ite, seq(
-      token('if'),
+      'if',
       field('if', $._expr),
-      token('then'),
+      'then',
       field('then', $._expr),
-      token('else'),
+      'else',
       field('else', $._expr)
     )),
 
     let_expr: $ => prec(PREC.let, seq(
-      token('let'),
+      'let',
       field('binder', $.let_binder),
-      token('in'),
+      'in',
       field('expr', $._expr)
     )),
 
     match_expr: $ => seq('match', $._expr, 'with', $.match_cases, 'end'),
 
     forall_expr: $ => prec(PREC.forall, seq(
-      token('forall'),
+      'forall',
       field('logic_binder', sep1(',', $.multi_logic_binder)),
       optional(field('triggers', $.triggers)),
       optional(field('filters', $.filters)),
@@ -168,7 +168,7 @@ module.exports = grammar({
     )),
 
     exists_expr: $ => prec(PREC.exists, seq(
-      token('exists'),
+      'exists',
       field('logic_binder', sep1(',', $.multi_logic_binder)),
       field('triggers', optional($.triggers)),
       field('filters', optional($.filters)),
@@ -177,11 +177,11 @@ module.exports = grammar({
     )),
 
     check_expr: $ => prec(PREC.check, seq(
-      token('check'), $._expr
+      'check', $._expr
     )),
 
     cut_expr: $ => prec(PREC.cut, seq(
-      token('cut'), $._expr
+      'cut', $._expr
     )),
 
     _infix_operator: $ => choice(
@@ -264,10 +264,10 @@ module.exports = grammar({
     // Type definitions
 
     primitive_type: $ => choice(
-      token('bool'),
-      token('unit'),
-      token('int'),
-      token('real'),
+      'bool',
+      'unit',
+      'int',
+      'real',
       seq(token('bitv'), '[', /[0-9]+/, ']'),
       $.ident,
       $.type_var,
@@ -277,7 +277,7 @@ module.exports = grammar({
 
     _primitive_type_or_prop: $ => choice(
       $.primitive_type,
-      token('prop')
+      'prop'
     ),
 
     _logic_type: $ => choice(
@@ -335,8 +335,8 @@ module.exports = grammar({
     // Top level declarations
 
     theory_elt: $ => choice(
-      seq(token('axiom'), $.ident, ':', $._expr),
-      seq(token('case_split'), $.ident, ':', $._expr)
+      seq('axiom', $.ident, ':', $._expr),
+      seq('case_split', $.ident, ':', $._expr)
     ),
 
     rewriting_list: $ => choice(
@@ -346,7 +346,7 @@ module.exports = grammar({
     ),
 
     theory_decl: $ => seq(
-      token('theory'),
+      'theory',
       field('name', $.ident),
       'extends',
       $.ident, '=', repeat($.theory_elt),
@@ -354,7 +354,7 @@ module.exports = grammar({
     ),
 
     _type_decl: $ => seq(
-      token('type'),
+      'type',
       choice(
         $.abstract_typedef,
         $.record_typedef,
@@ -363,7 +363,7 @@ module.exports = grammar({
     ),
 
     logic_decl: $ => seq(
-      token('logic'),
+      'logic',
       optional('ac'),
       sep1(',', $.ident),
       ':',
@@ -371,35 +371,35 @@ module.exports = grammar({
     ),
 
     axiom_decl: $ => seq(
-      token('axiom'),
+      'axiom',
       field('name', $.ident),
       ':',
       $._expr
     ),
 
     rewriting_decl: $ => seq(
-      token('rewriting'),
+      'rewriting',
       field('name', $.ident),
       ':',
       $.rewriting_list
     ),
 
     check_sat_decl: $ => seq(
-      token('check_sat'),
+      'check_sat',
       field('name', $.ident),
       ':',
       $._expr
     ),
 
     goal_decl: $ => seq(
-      token('goal'),
+      'goal',
       field('name', $.ident),
       ':',
       $._expr
     ),
 
     function_def: $ => seq(
-      token('function'),
+      'function',
       field('name', $.ident),
       '(',
       field('args', sep(',', $.logic_binder)),
@@ -411,7 +411,7 @@ module.exports = grammar({
     ),
 
     predicate_def: $ => seq(
-      token('predicate'),
+      'predicate',
       field('name', $.ident),
       optional(seq(
         '(',
