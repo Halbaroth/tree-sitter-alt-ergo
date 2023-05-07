@@ -251,25 +251,16 @@
           "name": "hexadecimal"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "true"
-          }
+          "type": "STRING",
+          "value": "true"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "false"
-          }
+          "type": "STRING",
+          "value": "false"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "void"
-          }
+          "type": "STRING",
+          "value": "void"
         },
         {
           "type": "SEQ",
@@ -321,11 +312,8 @@
               "name": "_simple_expr"
             },
             {
-              "type": "TOKEN",
-              "content": {
-                "type": "STRING",
-                "value": "with"
-              }
+              "type": "STRING",
+              "value": "with"
             },
             {
               "type": "SEQ",
@@ -910,11 +898,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "if"
-            }
+            "type": "STRING",
+            "value": "if"
           },
           {
             "type": "FIELD",
@@ -925,11 +910,8 @@
             }
           },
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "then"
-            }
+            "type": "STRING",
+            "value": "then"
           },
           {
             "type": "FIELD",
@@ -940,11 +922,8 @@
             }
           },
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "else"
-            }
+            "type": "STRING",
+            "value": "else"
           },
           {
             "type": "FIELD",
@@ -964,11 +943,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "let"
-            }
+            "type": "STRING",
+            "value": "let"
           },
           {
             "type": "FIELD",
@@ -979,11 +955,8 @@
             }
           },
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "in"
-            }
+            "type": "STRING",
+            "value": "in"
           },
           {
             "type": "FIELD",
@@ -1028,11 +1001,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "forall"
-            }
+            "type": "STRING",
+            "value": "forall"
           },
           {
             "type": "FIELD",
@@ -1117,11 +1087,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "exists"
-            }
+            "type": "STRING",
+            "value": "exists"
           },
           {
             "type": "FIELD",
@@ -1206,11 +1173,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "check"
-            }
+            "type": "STRING",
+            "value": "check"
           },
           {
             "type": "SYMBOL",
@@ -1226,11 +1190,8 @@
         "type": "SEQ",
         "members": [
           {
-            "type": "TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "cut"
-            }
+            "type": "STRING",
+            "value": "cut"
           },
           {
             "type": "SYMBOL",
@@ -1725,32 +1686,20 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "bool"
-          }
+          "type": "STRING",
+          "value": "bool"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "unit"
-          }
+          "type": "STRING",
+          "value": "unit"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "int"
-          }
+          "type": "STRING",
+          "value": "int"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "real"
-          }
+          "type": "STRING",
+          "value": "real"
         },
         {
           "type": "SEQ",
@@ -1853,11 +1802,8 @@
           "name": "primitive_type"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "prop"
-          }
+          "type": "STRING",
+          "value": "prop"
         }
       ]
     },
@@ -2206,11 +2152,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "TOKEN",
-              "content": {
-                "type": "STRING",
-                "value": "axiom"
-              }
+              "type": "STRING",
+              "value": "axiom"
             },
             {
               "type": "SYMBOL",
@@ -2230,11 +2173,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "TOKEN",
-              "content": {
-                "type": "STRING",
-                "value": "case_split"
-              }
+              "type": "STRING",
+              "value": "case_split"
             },
             {
               "type": "SYMBOL",
@@ -2295,11 +2235,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "theory"
-          }
+          "type": "STRING",
+          "value": "theory"
         },
         {
           "type": "FIELD",
@@ -2338,11 +2275,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "type"
-          }
+          "type": "STRING",
+          "value": "type"
         },
         {
           "type": "CHOICE",
@@ -2367,11 +2301,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "logic"
-          }
+          "type": "STRING",
+          "value": "logic"
         },
         {
           "type": "CHOICE",
@@ -2428,11 +2359,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "axiom"
-          }
+          "type": "STRING",
+          "value": "axiom"
         },
         {
           "type": "FIELD",
@@ -2456,11 +2384,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "rewriting"
-          }
+          "type": "STRING",
+          "value": "rewriting"
         },
         {
           "type": "FIELD",
@@ -2484,11 +2409,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "check_sat"
-          }
+          "type": "STRING",
+          "value": "check_sat"
         },
         {
           "type": "FIELD",
@@ -2512,11 +2434,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "goal"
-          }
+          "type": "STRING",
+          "value": "goal"
         },
         {
           "type": "FIELD",
@@ -2540,11 +2459,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "function"
-          }
+          "type": "STRING",
+          "value": "function"
         },
         {
           "type": "FIELD",
@@ -2629,11 +2545,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "predicate"
-          }
+          "type": "STRING",
+          "value": "predicate"
         },
         {
           "type": "FIELD",
